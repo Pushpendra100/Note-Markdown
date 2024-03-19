@@ -1,4 +1,12 @@
-import { Content, NotePreviewList, RootLayout, Sidebar, ActionButtonsRow } from '@/components'
+import {
+  Content,
+  NotePreviewList,
+  RootLayout,
+  Sidebar,
+  ActionButtonsRow,
+  MarkdownEditor,
+  FloatingNoteTitle
+} from '@/components'
 
 function App() {
   return (
@@ -7,7 +15,10 @@ function App() {
         <ActionButtonsRow className="flex justify-between mt-1" />
         <NotePreviewList className="mt-3 space-y-1" />
       </Sidebar>
-      <Content className="border-l-2  bg-gray-900 border-l-gray-700/70">Content</Content>
+      <Content className="border-l-2  bg-gray-900 border-l-gray-700/70">
+        <FloatingNoteTitle className="pt-2" />
+        <MarkdownEditor />
+      </Content>
     </RootLayout>
   )
 }
