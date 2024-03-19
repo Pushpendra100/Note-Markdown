@@ -1,8 +1,14 @@
+import { Content, NotePreviewList, RootLayout, Sidebar, ActionButtonsRow } from '@/components'
+
 function App() {
   return (
-    <div className="flex h-full items-center justify-center">
-      <span className="text-4xl text-blue-500">Hello from electron!</span>
-    </div>
+    <RootLayout>
+      <Sidebar className="p-2 bg-gray-800 ">
+        <ActionButtonsRow className="flex justify-between mt-1" />
+        <NotePreviewList className="mt-3 space-y-1" />
+      </Sidebar>
+      <Content className="border-l-2  bg-gray-900 border-l-gray-700/70">Content</Content>
+    </RootLayout>
   )
 }
 
