@@ -10,7 +10,8 @@ try {
     locale: navigator.language,
     getNotes: (...args: Parameters<GetNotes>) => ipcRenderer.invoke('getNotes', ...args),
     readNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('readNote', ...args),
-    writeNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('writeNote', ...args)
+    writeNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('writeNote', ...args),
+    createNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('createNote', ...args)
   })
 } catch (error) {
   console.log(error)
