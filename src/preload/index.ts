@@ -1,4 +1,4 @@
-import { GetNotes, ReadNote } from '@shared/types'
+import { DeleteNote, GetNotes, ReadNote } from '@shared/types'
 import { contextBridge, ipcRenderer } from 'electron'
 
 if (!process.contextIsolated) {
@@ -11,7 +11,8 @@ try {
     getNotes: (...args: Parameters<GetNotes>) => ipcRenderer.invoke('getNotes', ...args),
     readNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('readNote', ...args),
     writeNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('writeNote', ...args),
-    createNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('createNote', ...args)
+    createNote: (...args: Parameters<ReadNote>) => ipcRenderer.invoke('createNote', ...args),
+    deleteNote: (...args: Parameters<DeleteNote>) => ipcRenderer.invoke('deleteNote', ...args)
   })
 } catch (error) {
   console.log(error)
