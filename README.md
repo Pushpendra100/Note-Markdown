@@ -1,10 +1,8 @@
 # note-mark
 
-An Electron application with React and TypeScript
+An Electron application with React and TypeScript. This application uses Jotai for state management. You can use this application to take notes using a Markdown Editor and save your notes locally.
 
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+![NoteMark](image.png)
 
 ## Project Setup
 
@@ -32,3 +30,7 @@ $ yarn build:mac
 # For Linux
 $ yarn build:linux
 ```
+
+## Demo Video
+
+[Watch the demo video of NoteMark](https://drive.google.com/drive/folders/1qydR5J0gLFTK8jbpbNechkLTs2v45h0p?usp=sharing)
